@@ -1,0 +1,264 @@
+/* body styles */
+body {
+    position: relative;
+    box-sizing: border-box;
+    background-color: #fcfcfc; 
+    color: rgb(156,156,156);
+}
+
+a {
+    color: rgb(156,156,156);
+    text-decoration: none;
+}
+
+/* Wrapper styles */
+.wrapper {
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+h2,
+h3,
+.exit {
+    margin: 0;
+    color: #535353;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-weight: lighter;
+    flex-grow: 1;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+header input {
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    border: 2px solid rgb(156,156,156);
+    border-radius: 5px;
+}
+
+/* Directory styles */
+#directory {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Employee styles */
+.employee {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    flex-grow: 1;
+    border: 2px solid #c2c2c2;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    transition: transform .2s ease-in;
+    text-align: center;
+}
+
+.employee:hover {
+    border: 2px solid #a2a2a2;
+    transform: scale(1.05);
+}
+
+.employee img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.employee img:hover {
+    cursor: pointer;
+}
+
+.employee .employee-info {
+    margin-left: 10px;
+}
+
+.employee-info h3,
+.employee-info p{
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.employee-info h3:hover{
+    cursor: pointer;
+}
+
+.employee-info a{
+    text-transform: lowercase;
+}
+
+/* Overlay Styles */
+
+.overlay-div {
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(126,126,126, .7);
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    z-index: 1000;
+}
+
+.employee-details {
+    width: 80%;
+    align-self: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid rgb(126,126,126);
+    border-radius: 8px;
+}
+
+.infoContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid rgb(156,156,156);
+    padding-bottom: 20px;
+}
+
+.overlay-div .exit {
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    opacity: .5;
+}
+
+
+.overlay-div .exit:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.nav-right,
+.nav-left {
+    width: 25px;
+    height:25px;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    color: #535353;
+    border: 2px solid #535353;
+    text-align: center;
+    opacity: .5;
+    top: 80%;
+}
+
+.nav-right:hover,
+.nav-left:hover {
+    opacity: 1;
+}
+
+
+.nav-right{
+    right: 10px;
+}
+
+.nav-left {
+    left: 10px;
+}
+ 
+
+.infoContainer img {
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.infoContainer h3,
+.infoContainer p,
+.extraInfoContainer p {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.extraInfoContainer {
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    /* Directory styles */
+    #directory {
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+
+    header {
+        flex-direction: row;
+        text-align: start;
+        padding-top: 20px;
+    }
+
+    header input{
+        width: 30%;
+    }
+
+    /* Employee style */
+    .employee {
+        width: 43%; 
+        max-width: 50%;
+        margin-bottom: 15px;
+        height: 125px;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px;
+        text-align: start;
+    }
+
+    .employee-info {
+        width: 50%;
+    }
+
+    .employee img {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .employee-details {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1250px) {
+    /* Employee style */
+    #directory .employee {
+        width: 25%;
+        max-width: 30%; 
+        margin: 20px;
+        height: 125px;
+    }
+    
+    .employee-details {
+        width: 25%;
+    }
+}
